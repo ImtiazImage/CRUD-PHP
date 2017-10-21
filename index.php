@@ -30,6 +30,8 @@ include 'Database.php';
 	}
 	?>
 </table>
+
+<a href="create.php">Create</a>
 		
 
 
