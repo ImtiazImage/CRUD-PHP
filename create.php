@@ -3,12 +3,7 @@ include 'inc/header.php';
 include 'config.php';
 include 'Database.php';
 ?>
-<?php
-	$db = new Database();
-	$query = "SELECT * FROM tbl_user";
-	$select=$db->select($query);
 
-?>
 
 <form action="create.php" method="POST">	
 <table>
