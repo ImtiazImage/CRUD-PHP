@@ -35,6 +35,17 @@ class Database{
 		}
 	}
 
+//Create Data to Database
+	public function create($query){
+		$insert_row = $this->link->query($query) or die($this->link->error.__LINE__);
+		if($insert_row){
+			header("Location: index.php?msg=".urlencode("Data Inserted Successfully!!!"));
+			exit();
+		} else{
+			die("Error: (".$this->link->errno.")".$this->link->error);
+		}
+	}
+
 
 
 }

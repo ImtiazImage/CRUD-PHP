@@ -9,6 +9,11 @@ include 'Database.php';
 	$select=$db->select($query);
 
 ?>
+<?php
+if (isset($_GET['msg'])) {
+	echo "<span style = 'color:green'>".$_GET['msg']."</span>";
+}
+?>
 		
 <table class="tblone">
 	<tr>
