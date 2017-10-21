@@ -17,15 +17,18 @@ if (isset($_GET['msg'])) {
 		
 <table class="tblone">
 	<tr>
+		<th width="10%">Serial</th>		
 		<th width="35%">Name</th>
 		<th width="25%">E-mail</th>
 		<th width="15%">Skill</th>
-		<th width="25%">Action</th>		
+		<th width="15%">Action</th>		
 	</tr>
 <?php if($select){ 
+	$i=1;
 		while($read = $select->fetch_assoc()){
 	?> 
 	<tr>
+		<td> <?php echo $i++; ?> </td>
 		<td> <?php echo $read['name']; ?> </td>
 		<td> <?php echo $read['email']; ?> </td>
 		<td> <?php echo $read['skill']; ?> </td>

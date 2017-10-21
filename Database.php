@@ -56,7 +56,16 @@ class Database{
 			die("Error: (".$this->link->errno.")".$this->link->error);
 		}
 	}
-
+//Delete Data From Database
+	public function delete($query){
+		$delete_row = $this->link->query($query) or die($this->link->error.__LINE__);
+		if($delete_row){
+			header("Location: index.php?msg=".urlencode("Data Deleted Successfully!!!"));
+			exit();
+		} else{
+			die("Error: (".$this->link->errno.")".$this->link->error);
+		}
+	}
 
 
 }

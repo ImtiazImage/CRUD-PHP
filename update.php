@@ -53,6 +53,7 @@ if (isset($_GET['id'])) {
 		<td>
 			<input type="submit" name="update" value="Update" />
 			<input type="reset" value="Cancel" />
+			<input type="submit" name="delete" value="Delete" />
 		</td>
 	</tr>
 
@@ -63,5 +64,8 @@ if (isset($_GET['id'])) {
 <?php include 'inc/footer.php'; ?>
 
 <?php
-
+if (isset($_POST['delete'])) {
+	$query = "DELETE FROM tbl_user WHERE id=$id";
+	$delte = $db->delete($query);
+}
 ?>
